@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F49AB7F1B86FCB0009AB80C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F49AB7E1B86FCB0009AB80C /* AppDelegate.swift */; };
+		8F49AB811B86FCB0009AB80C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F49AB801B86FCB0009AB80C /* ViewController.swift */; };
+		8F49AB841B86FCB0009AB80C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F49AB821B86FCB0009AB80C /* Main.storyboard */; };
+		8F49AB861B86FCB0009AB80C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F49AB851B86FCB0009AB80C /* Images.xcassets */; };
+		8F49AB891B86FCB0009AB80C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F49AB871B86FCB0009AB80C /* LaunchScreen.xib */; };
+		8F49AB951B86FCB0009AB80C /* Earth_DiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F49AB941B86FCB0009AB80C /* Earth_DiaryTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F49AB8F1B86FCB0009AB80C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F49AB711B86FCB0009AB80C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F49AB781B86FCB0009AB80C;
+			remoteInfo = "Earth Diary";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8F49AB791B86FCB0009AB80C /* Earth Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Earth Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F49AB7D1B86FCB0009AB80C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F49AB7E1B86FCB0009AB80C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F49AB801B86FCB0009AB80C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F49AB831B86FCB0009AB80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F49AB851B86FCB0009AB80C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8F49AB881B86FCB0009AB80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8F49AB8E1B86FCB0009AB80C /* Earth DiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Earth DiaryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F49AB931B86FCB0009AB80C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F49AB941B86FCB0009AB80C /* Earth_DiaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Earth_DiaryTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F49AB761B86FCB0009AB80C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F49AB8B1B86FCB0009AB80C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F49AB701B86FCB0009AB80C = {
+			isa = PBXGroup;
+			children = (
+				8F49AB7B1B86FCB0009AB80C /* Earth Diary */,
+				8F49AB911B86FCB0009AB80C /* Earth DiaryTests */,
+				8F49AB7A1B86FCB0009AB80C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F49AB7A1B86FCB0009AB80C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F49AB791B86FCB0009AB80C /* Earth Diary.app */,
+				8F49AB8E1B86FCB0009AB80C /* Earth DiaryTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F49AB7B1B86FCB0009AB80C /* Earth Diary */ = {
+			isa = PBXGroup;
+			children = (
+				8F49AB7E1B86FCB0009AB80C /* AppDelegate.swift */,
+				8F49AB801B86FCB0009AB80C /* ViewController.swift */,
+				8F49AB821B86FCB0009AB80C /* Main.storyboard */,
+				8F49AB851B86FCB0009AB80C /* Images.xcassets */,
+				8F49AB871B86FCB0009AB80C /* LaunchScreen.xib */,
+				8F49AB7C1B86FCB0009AB80C /* Supporting Files */,
+			);
+			path = "Earth Diary";
+			sourceTree = "<group>";
+		};
+		8F49AB7C1B86FCB0009AB80C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F49AB7D1B86FCB0009AB80C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8F49AB911B86FCB0009AB80C /* Earth DiaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F49AB941B86FCB0009AB80C /* Earth_DiaryTests.swift */,
+				8F49AB921B86FCB0009AB80C /* Supporting Files */,
+			);
+			path = "Earth DiaryTests";
+			sourceTree = "<group>";
+		};
+		8F49AB921B86FCB0009AB80C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F49AB931B86FCB0009AB80C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F49AB781B86FCB0009AB80C /* Earth Diary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F49AB981B86FCB0009AB80C /* Build configuration list for PBXNativeTarget "Earth Diary" */;
+			buildPhases = (
+				8F49AB751B86FCB0009AB80C /* Sources */,
+				8F49AB761B86FCB0009AB80C /* Frameworks */,
+				8F49AB771B86FCB0009AB80C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Earth Diary";
+			productName = "Earth Diary";
+			productReference = 8F49AB791B86FCB0009AB80C /* Earth Diary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F49AB8D1B86FCB0009AB80C /* Earth DiaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F49AB9B1B86FCB0009AB80C /* Build configuration list for PBXNativeTarget "Earth DiaryTests" */;
+			buildPhases = (
+				8F49AB8A1B86FCB0009AB80C /* Sources */,
+				8F49AB8B1B86FCB0009AB80C /* Frameworks */,
+				8F49AB8C1B86FCB0009AB80C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F49AB901B86FCB0009AB80C /* PBXTargetDependency */,
+			);
+			name = "Earth DiaryTests";
+			productName = "Earth DiaryTests";
+			productReference = 8F49AB8E1B86FCB0009AB80C /* Earth DiaryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F49AB711B86FCB0009AB80C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Abdelaziz Elrashed";
+				TargetAttributes = {
+					8F49AB781B86FCB0009AB80C = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					8F49AB8D1B86FCB0009AB80C = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 8F49AB781B86FCB0009AB80C;
+					};
+				};
+			};
+			buildConfigurationList = 8F49AB741B86FCB0009AB80C /* Build configuration list for PBXProject "Earth Diary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F49AB701B86FCB0009AB80C;
+			productRefGroup = 8F49AB7A1B86FCB0009AB80C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F49AB781B86FCB0009AB80C /* Earth Diary */,
+				8F49AB8D1B86FCB0009AB80C /* Earth DiaryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F49AB771B86FCB0009AB80C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F49AB841B86FCB0009AB80C /* Main.storyboard in Resources */,
+				8F49AB891B86FCB0009AB80C /* LaunchScreen.xib in Resources */,
+				8F49AB861B86FCB0009AB80C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F49AB8C1B86FCB0009AB80C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F49AB751B86FCB0009AB80C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F49AB811B86FCB0009AB80C /* ViewController.swift in Sources */,
+				8F49AB7F1B86FCB0009AB80C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F49AB8A1B86FCB0009AB80C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F49AB951B86FCB0009AB80C /* Earth_DiaryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F49AB901B86FCB0009AB80C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F49AB781B86FCB0009AB80C /* Earth Diary */;
+			targetProxy = 8F49AB8F1B86FCB0009AB80C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F49AB821B86FCB0009AB80C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F49AB831B86FCB0009AB80C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8F49AB871B86FCB0009AB80C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F49AB881B86FCB0009AB80C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F49AB961B86FCB0009AB80C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F49AB971B86FCB0009AB80C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F49AB991B86FCB0009AB80C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Earth Diary/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8F49AB9A1B86FCB0009AB80C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Earth Diary/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8F49AB9C1B86FCB0009AB80C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Earth DiaryTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Earth Diary.app/Earth Diary";
+			};
+			name = Debug;
+		};
+		8F49AB9D1B86FCB0009AB80C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Earth DiaryTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Earth Diary.app/Earth Diary";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F49AB741B86FCB0009AB80C /* Build configuration list for PBXProject "Earth Diary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F49AB961B86FCB0009AB80C /* Debug */,
+				8F49AB971B86FCB0009AB80C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F49AB981B86FCB0009AB80C /* Build configuration list for PBXNativeTarget "Earth Diary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F49AB991B86FCB0009AB80C /* Debug */,
+				8F49AB9A1B86FCB0009AB80C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8F49AB9B1B86FCB0009AB80C /* Build configuration list for PBXNativeTarget "Earth DiaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F49AB9C1B86FCB0009AB80C /* Debug */,
+				8F49AB9D1B86FCB0009AB80C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F49AB711B86FCB0009AB80C /* Project object */;
+}
