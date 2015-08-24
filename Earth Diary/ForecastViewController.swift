@@ -21,6 +21,7 @@ class ForecastViewController: UIViewController {
     @IBOutlet weak var windSpeedLabel: UILabel!
     @IBOutlet weak var windDirectionLabel: UILabel!
     @IBOutlet weak var createdDateLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
     
     override func viewDidLoad() {
         
@@ -40,6 +41,7 @@ class ForecastViewController: UIViewController {
             windSpeedLabel.text = "\(fc.wind_speed)"
             windDirectionLabel.text = "\(fc.wind_direction)"
             createdDateLabel.text = "\(fc.created_date)"
+            cityLabel.text = "\(pin.name)"
         }
         
         if let fc = forcast{
@@ -52,6 +54,7 @@ class ForecastViewController: UIViewController {
             windSpeedLabel.text = "\(fc.wind_speed)"
             windDirectionLabel.text = "\(fc.wind_direction)"
             createdDateLabel.text = "\(fc.created_date)"
+            cityLabel.text = "\(fc.pin.name)"
             
             navigationItem.title = "Forecasts Details"
         }

@@ -8,6 +8,6 @@ This app is gathering information weather from http://openweathermap.org every 2
 
 2- you can back to your past data and the app will update it with new data while you browsing you Pins.
 
-3- You can anaylze what you collect.
+3- You can analyze what you collect.
 
 

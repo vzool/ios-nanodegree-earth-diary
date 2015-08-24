@@ -31,11 +31,7 @@ class ForecastListTableViewController: UITableViewController, UITableViewDataSou
         let fc = pin.forecasts[pin.forecasts.count - 1]
         is_fetch_forecast_required =  reminderDate.isGreaterThanDate(fc.created_date)
         
-        println("is_fetch_forecast_required: \(is_fetch_forecast_required)")
-
         if is_fetch_forecast_required{
-            
-            println("OK FIRE")
 
             showIndicator(true)
             

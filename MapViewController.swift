@@ -84,34 +84,35 @@ class MapViewController: UIViewController, MKMapViewDelegate, NSFetchedResultsCo
                         
                     }else{
                         
-                        var forcast = Forecast(data:data, context: self.sharedContext)
-                        
-                        var pin = Pin(data: data, context: self.sharedContext)
-                        
-                        pin.lat = newCoord.latitude
-                        pin.lon = newCoord.longitude
-                        
-                        forcast.pin = pin
-                        self.selected_pin = pin
-                        
-                        CoreDataStackManager.sharedInstance().saveContext()
-                        
-                        if let name = data.valueForKey("name") as? String{
+                        dispatch_async(dispatch_get_main_queue()){
                             
-                            var word = "Forecast"
-                            word += pin.forecasts.count > 1 ? "s" : ""
+                            var forcast = Forecast(data:data, context: self.sharedContext)
                             
-                            if pin.forecasts.count <= 0{
-                                word = "No \(word)s"
-                            }else{
-                                word = "\(pin.forecasts.count) \(word)"
+                            var pin = Pin(data: data, context: self.sharedContext)
+                            
+                            pin.lat = newCoord.latitude
+                            pin.lon = newCoord.longitude
+                            
+                            forcast.pin = pin
+                            self.selected_pin = pin
+                            
+                            CoreDataStackManager.sharedInstance().saveContext()
+                            
+                            if let name = data.valueForKey("name") as? String{
+                                
+                                var word = "Forecast"
+                                word += pin.forecasts.count > 1 ? "s" : ""
+                                
+                                if pin.forecasts.count <= 0{
+                                    word = "No \(word)s"
+                                }else{
+                                    word = "\(pin.forecasts.count) \(word)"
+                                }
+                                
+                                self.selected_annotation.title = word
+                                self.selected_annotation.pin = pin
                             }
                             
-                            self.selected_annotation.title = word
-                            self.selected_annotation.pin = pin
-                        }
-                        
-                        dispatch_async(dispatch_get_main_queue()){
                             self.goToFirstForcast()
                         }
                     }
