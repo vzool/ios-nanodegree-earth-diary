@@ -56,13 +56,14 @@ class ForecastListTableViewController: UITableViewController, UITableViewDataSou
                         
                     }else{
                         
-                        var forcast = Forecast(data:data, context: self.sharedContext)
-                        
-                        forcast.pin = self.pin
-                        
-                        CoreDataStackManager.sharedInstance().saveContext()
-                        
                         dispatch_async(dispatch_get_main_queue()){
+                            
+                            var forcast = Forecast(data:data, context: self.sharedContext)
+                            
+                            forcast.pin = self.pin
+                            
+                            CoreDataStackManager.sharedInstance().saveContext()
+                            
                             self.finishFetchedForcasts()
                         }
                     }
