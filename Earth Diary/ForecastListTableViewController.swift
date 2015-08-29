@@ -14,15 +14,22 @@ class ForecastListTableViewController: UITableViewController, UITableViewDataSou
     var pin:Pin!
     var selected_index:Int!
     var is_fetch_forecast_required: Bool = true
+    var refreshButton:UIButton!
     
     @IBOutlet var tableViewObject: UITableView!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        navigationItem.title = "Location Forecasts"
+
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Analyze", style: UIBarButtonItemStyle.Plain, target: self, action: "analyze")
+        
+        refreshButton =  UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        refreshButton.frame = CGRectMake(0, 0, 100, 40) as CGRect
+        refreshButton.backgroundColor = UIColor.redColor()
+        refreshButton.setTitle("Refresh", forState: UIControlState.Normal)
+        refreshButton.addTarget(self, action: "fetchForecastFromNetwork", forControlEvents: UIControlEvents.TouchUpInside)
+        navigationItem.titleView = refreshButton
         
         // Get Reminder Date (which is Due date minus 2 hours lets say)
         var reminderDate = NSDate().addHours(-2)
@@ -33,43 +40,48 @@ class ForecastListTableViewController: UITableViewController, UITableViewDataSou
         
         if is_fetch_forecast_required{
 
-            showIndicator(true)
+            fetchForecastFromNetwork()
+        }
+    }
+    
+    func fetchForecastFromNetwork(){
+        
+        showIndicator(true)
+        
+        OpenWeatherMap.GetTodayForecast("\(pin.lat)", lon: "\(pin.lon)", completion: { (data) -> Void in
             
-            OpenWeatherMap.GetTodayForecast("\(pin.lat)", lon: "\(pin.lon)", completion: { (data) -> Void in
+            // error handler
+            if let error = data.valueForKey("error") as? NSError{
+                
+                dispatch_async(dispatch_get_main_queue()){
+                    self.showError(error.localizedDescription)
+                }
+                
+            }else{
                 
                 // error handler
-                if let error = data.valueForKey("error") as? NSError{
+                
+                if let message = data.valueForKey("message") as? String{
                     
                     dispatch_async(dispatch_get_main_queue()){
-                        self.showError(error.localizedDescription)
+                        self.showError(message)
                     }
                     
                 }else{
                     
-                    // error handler
-                    
-                    if let message = data.valueForKey("message") as? String{
+                    dispatch_async(dispatch_get_main_queue()){
                         
-                        dispatch_async(dispatch_get_main_queue()){
-                            self.showError(message)
-                        }
+                        var forcast = Forecast(data:data, context: self.sharedContext)
                         
-                    }else{
+                        forcast.pin = self.pin
                         
-                        dispatch_async(dispatch_get_main_queue()){
-                            
-                            var forcast = Forecast(data:data, context: self.sharedContext)
-                            
-                            forcast.pin = self.pin
-                            
-                            CoreDataStackManager.sharedInstance().saveContext()
-                            
-                            self.finishFetchedForcasts()
-                        }
+                        CoreDataStackManager.sharedInstance().saveContext()
+                        
+                        self.finishFetchedForcasts()
                     }
                 }
-            })
-        }
+            }
+        })
     }
     
     func finishFetchedForcasts(){
@@ -87,15 +99,7 @@ class ForecastListTableViewController: UITableViewController, UITableViewDataSou
         
         navigationItem.leftBarButtonItem?.enabled = !state
         navigationItem.rightBarButtonItem?.enabled = !state
-        
-        if state{
-            
-            navigationItem.title = "Fetching Forecasts..."
-            
-        }else{
-            
-            navigationItem.title = "Location Forecasts"
-        }
+        refreshButton.enabled = !state
     }
     
     func showError(error: String){
