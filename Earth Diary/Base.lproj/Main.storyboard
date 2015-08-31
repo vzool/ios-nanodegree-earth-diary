@@ -265,7 +265,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="aP5-FI-YNH"/>
                     <connections>
-                        <outlet property="tableView" destination="8pT-Mh-rBF" id="7ma-fd-mBj"/>
+                        <outlet property="tableView" destination="8pT-Mh-rBF" id="kwC-MY-1wD"/>
                         <segue destination="vvj-H5-4x5" kind="show" identifier="show_forecasts" id="Mww-o2-nsj"/>
                     </connections>
                 </viewController>

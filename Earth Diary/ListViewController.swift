@@ -13,6 +13,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var selected_index:NSIndexPath!
     
+    var refreshControl:UIRefreshControl!
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -23,6 +25,11 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         fetchedResultsController.delegate = self
         fetchedResultsController.performFetch(nil)
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -30,6 +37,11 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         fetchedResultsController.performFetch(nil)
         tableView.reloadData()
+    }
+    
+    func refresh(sender:AnyObject){
+        tableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     // MARK: - tableView
